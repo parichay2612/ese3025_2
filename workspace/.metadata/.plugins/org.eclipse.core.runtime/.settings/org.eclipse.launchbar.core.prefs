@@ -1,0 +1,11 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:hello Debug,org.eclipse.launchbar.core.descriptorType.default\:test LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:periph_blinky LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:webserver_freertos LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:ucos_iii_blinky LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:freertos_blinky LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:hello LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:activity1 LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:testle LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:led-color LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:blinnktest1 LinkServer Debug
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:activity1\ LinkServer\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:blinnktest1\ LinkServer\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:hello\ Debug/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:hello\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:hello\ LinkServer\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:test\ LinkServer\ Debug/activeLaunchMode=debug

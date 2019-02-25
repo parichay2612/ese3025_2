@@ -1,0 +1,14 @@
+16:02:53 **** Incremental Build of configuration Debug for project webserver_freertos ****
+make -r -j4 all 
+Building file: ../example/src/webserver_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/webserver_freertos/example/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/webserver_freertos/lwip/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/webserver_freertos/lwip/inc/ipv4" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/webserver_freertos/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/webserver_freertos.d" -MT"example/src/webserver_freertos.o" -MT"example/src/webserver_freertos.d" -o "example/src/webserver_freertos.o" "../example/src/webserver_freertos.c"
+../example/src/webserver_freertos.c:49:10: fatal error: arch\lpc17xx_40xx_emac.h: No such file or directory
+ #include "arch\lpc17xx_40xx_emac.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+example/src/subdir.mk:33: recipe for target 'example/src/webserver_freertos.o' failed
+make: *** [example/src/webserver_freertos.o] Error 1
+
+16:02:53 Build Finished (took 344ms)
+

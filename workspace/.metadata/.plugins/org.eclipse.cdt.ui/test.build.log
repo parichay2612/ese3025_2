@@ -1,0 +1,24 @@
+16:14:02 **** Incremental Build of configuration Debug for project test ****
+make -r -j4 all 
+Building file: ../src/sysinit.c
+Building file: ../src/test.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/test.d" -MT"src/test.o" -MT"src/test.d" -o "src/test.o" "../src/test.c"
+../src/sysinit.c:33:11: fatal error: chip.h: No such file or directory
+  #include "chip.h"
+src/subdir.mk:27: recipe for target 'src/sysinit.o' failed
+           ^~~~~~~~
+compilation terminated.
+make: *** [src/sysinit.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/test.c:13:10: fatal error: chip.h: No such file or directory
+ #include "chip.h"
+          ^~~~~~~~
+src/subdir.mk:27: recipe for target 'src/test.o' failed
+compilation terminated.
+make: *** [src/test.o] Error 1
+
+16:14:02 Build Finished (took 197ms)
+

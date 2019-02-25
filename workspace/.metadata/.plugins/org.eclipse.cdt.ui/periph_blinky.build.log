@@ -1,0 +1,16 @@
+18:00:00 **** Build of configuration Debug for project periph_blinky ****
+make -r -j4 all 
+Building target: periph_blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/Debug" -L"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/Debug" -Xlinker -Map="periph_blinky.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "periph_blinky_Debug.ld" -o "periph_blinky.axf"  ./example/src/cr_startup_lpc175x_6x.o ./example/src/sysinit.o ./example/src/systick.o   -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x
+Finished building target: periph_blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_blinky.axf"; # arm-none-eabi-objcopy -v -O binary "periph_blinky.axf" "periph_blinky.bin" ; # checksum -p LPC1769 -d "periph_blinky.bin";
+   text	   data	    bss	    dec	    hex	filename
+   5576	      0	    488	   6064	   17b0	periph_blinky.axf
+ 
+
+18:00:00 Build Finished (took 336ms)
+

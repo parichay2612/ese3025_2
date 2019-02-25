@@ -1,0 +1,31 @@
+18:00:10 **** Build of configuration Debug for project periph_spi ****
+make -r -j4 all 
+Building file: ../example/src/cr_startup_lpc175x_6x.c
+Building file: ../example/src/sysinit.c
+Building file: ../example/src/spi.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/spi.d" -MT"example/src/spi.o" -MT"example/src/spi.d" -o "example/src/spi.o" "../example/src/spi.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc175x_6x.d" -MT"example/src/cr_startup_lpc175x_6x.o" -MT"example/src/cr_startup_lpc175x_6x.d" -o "example/src/cr_startup_lpc175x_6x.o" "../example/src/cr_startup_lpc175x_6x.c"
+Finished building: ../example/src/cr_startup_lpc175x_6x.c
+ 
+Finished building: ../example/src/sysinit.c
+ 
+Finished building: ../example/src/spi.c
+ 
+Building target: periph_spi.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/Debug" -L"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/Debug" -Xlinker -Map="periph_spi.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "periph_spi_Debug.ld" -o "periph_spi.axf"  ./example/src/cr_startup_lpc175x_6x.o ./example/src/spi.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x
+Finished building target: periph_spi.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_spi.axf"; # arm-none-eabi-objcopy -v -O binary "periph_spi.axf" "periph_spi.bin" ; # checksum -p LPC1769 -d "periph_spi.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9620	     96	   1564	  11280	   2c10	periph_spi.axf
+ 
+
+18:00:11 Build Finished (took 339ms)
+

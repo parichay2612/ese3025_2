@@ -1,0 +1,51 @@
+19:09:18 **** Build of configuration Debug for project testle ****
+make -r -j4 all 
+Building file: ../src/cr_startup_lpc175x_6x.c
+Building file: ../src/crp.c
+Building file: ../src/sysinit.c
+Building file: ../src/testle.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/testle.d" -MT"src/testle.o" -MT"src/testle.d" -o "src/testle.o" "../src/testle.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+../src/testle.c:2:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/cr_startup_lpc175x_6x.c
+ 
+Finished building: ../src/crp.c
+ 
+In file included from ../src/sysinit.c:35:0:
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h: In function 'Board_LED_Init':
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: error: 'LED0_GPIO_BIT_NUM' undeclared (first use in this function); did you mean 'LED0_GPIO_PORT_NUM'?
+  Chip_GPIO_WriteDirBit(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, true);
+                                                      ^~~~~~~~~~~~~~~~~
+                                                      LED0_GPIO_PORT_NUM
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:27: recipe for target 'src/sysinit.o' failed
+At top level:
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:96:13: warning: 'Board_LED_Init' defined but not used [-Wunused-function]
+ static void Board_LED_Init(void)
+             ^~~~~~~~~~~~~~
+make: *** [src/sysinit.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/testle.c:16:0:
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h: In function 'Board_LED_Init':
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: error: 'LED0_GPIO_BIT_NUM' undeclared (first use in this function); did you mean 'LED0_GPIO_PORT_NUM'?
+  Chip_GPIO_WriteDirBit(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, true);
+                                                      ^~~~~~~~~~~~~~~~~
+                                                      LED0_GPIO_PORT_NUM
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:96:13: warning: 'Board_LED_Init' defined but not used [-Wunused-function]
+ static void Board_LED_Init(void)
+             ^~~~~~~~~~~~~~
+make: *** [src/testle.o] Error 1
+src/subdir.mk:27: recipe for target 'src/testle.o' failed
+
+19:09:18 Build Finished (took 280ms)
+

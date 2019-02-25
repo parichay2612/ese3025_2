@@ -1,0 +1,31 @@
+18:04:46 **** Incremental Build of configuration Debug for project rgb ****
+make -r -j4 all 
+Building file: ../src/rgb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/rgb.d" -MT"src/rgb.o" -MT"src/rgb.d" -o "src/rgb.o" "../src/rgb.c"
+../src/rgb.c: In function 'main':
+../src/rgb.c:28:5: warning: implicit declaration of function 'SystemInit'; did you mean 'Chip_SystemInit'? [-Wimplicit-function-declaration]
+     SystemInit();                    //Clock and PLL configuration
+     ^~~~~~~~~~
+     Chip_SystemInit
+../src/rgb.c:29:16: error: 'LPC_IOCON_T {aka struct <anonymous>}' has no member named 'PINSEL4'; did you mean 'PINSEL'?
+     LPC_IOCON->PINSEL4 = 0x000000;  //Configure the PORT2 Pins as GPIO;
+                ^~~~~~~
+                PINSEL
+../src/rgb.c:30:16: error: 'LPC_GPIO_T {aka struct <anonymous>}' has no member named 'FIODIR'; did you mean 'DIR'?
+     LPC_GPIO2->FIODIR = 0xffffffff;  //Configure the PORT2 pins as OUTPUT;
+                ^~~~~~
+src/subdir.mk:27: recipe for target 'src/rgb.o' failed
+                DIR
+../src/rgb.c:34:20: error: 'LPC_GPIO_T {aka struct <anonymous>}' has no member named 'FIOSET'; did you mean 'SET'?
+         LPC_GPIO2->FIOSET = 0xffffffff;     // Make all the Port pins as high
+                    ^~~~~~
+                    SET
+../src/rgb.c:37:20: error: 'LPC_GPIO_T {aka struct <anonymous>}' has no member named 'FIOCLR'; did you mean 'CLR'?
+         LPC_GPIO2->FIOCLR = 0xffffffff;     // Make all the Port pins as low
+                    ^~~~~~
+                    CLR
+make: *** [src/rgb.o] Error 1
+
+18:04:47 Build Finished (took 167ms)
+
