@@ -1,6 +1,40 @@
-12:16:55 **** Incremental Build of configuration Debug for project led-color ****
+22:20:59 **** Build of configuration Debug for project led-color ****
 make -r -j4 all 
-make: Nothing to be done for 'all'.
+Building file: ../src/cr_startup_lpc175x_6x.c
+Building file: ../src/led-color.c
+Building file: ../src/sysinit.c
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/work/ese3025_2/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/work/ese3025_2/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/work/ese3025_2/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/led-color.d" -MT"src/led-color.o" -MT"src/led-color.d" -o "src/led-color.o" "../src/led-color.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/parichey/work/ese3025_2/workspace/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/crp.c
+ 
+Finished building: ../src/cr_startup_lpc175x_6x.c
+ 
+Finished building: ../src/sysinit.c
+ 
+Finished building: ../src/led-color.c
+ 
+Building target: led-color.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/parichey/work/ese3025_2/workspace/lpc_chip_175x_6x/Debug" -Xlinker -Map="led-color.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "led-color_Debug.ld" -o "led-color.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/led-color.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:        2348 B       512 KB      0.45%
+        RamLoc32:           4 B        32 KB      0.01%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: led-color.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "led-color.axf"; # arm-none-eabi-objcopy -v -O binary "led-color.axf" "led-color.bin" ; # checksum -p LPC1769 -d "led-color.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2348	      0	      4	   2352	    930	led-color.axf
+ 
 
-12:16:55 Build Finished (took 125ms)
+22:21:00 Build Finished (took 731ms)
 

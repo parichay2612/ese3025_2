@@ -1,6 +1,12 @@
-18:08:46 **** Incremental Build of configuration Debug for project freertos_blinky ****
+22:38:05 **** Incremental Build of configuration Debug for project freertos_blinky ****
 make -r -j4 all 
-make: Nothing to be done for 'all'.
+Building target: freertos_blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/parichey/work/ese3025_2/workspace/lpc_chip_175x_6x/Debug" -L"/home/parichey/work/ese3025_2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug" -Xlinker -Map="freertos_blinky.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "freertos_blinky_Debug.ld" -o "freertos_blinky.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/tasks.o  ./example/src/cr_startup_lpc175x_6x.o ./example/src/freertos_blinky.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x
+/usr/local/mcuxpressoide-10.3.0_2200/ide/plugins/com.nxp.mcuxpresso.tools.linux_10.3.0.201811011841/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/bin/ld: cannot find -llpc_board_nxp_lpcxpresso_1769
+makefile:31: recipe for target 'freertos_blinky.axf' failed
+collect2: error: ld returned 1 exit status
+make: *** [freertos_blinky.axf] Error 1
 
-18:08:46 Build Finished (took 174ms)
+22:38:05 Build Finished (took 423ms)
 

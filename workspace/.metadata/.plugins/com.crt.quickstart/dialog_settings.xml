@@ -12,6 +12,6 @@
 		</list>
 	</section>
 	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
-		<item value="/usr/local/mcuxpressoide-10.3.0_2200/ide/plugins/com.nxp.mcuxpresso.tools.wizards_10.3.0.201810311031/Examples/LPCOpen" key="dirname"/>
+		<item value="/home/parichey/Downloads" key="dirname"/>
 	</section>
 </section>

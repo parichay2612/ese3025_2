@@ -1,21 +1,21 @@
-12:02:26 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
+22:38:02 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
 make -r all 
 Building file: ../src/board.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_chip_175x_6x/inc" -I"/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.o" -MT"src/board.d" -o "src/board.o" "../src/board.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/parichey/work/ese3025_2/workspace/lpc_chip_175x_6x/inc" -I"/home/parichey/work/ese3025_2/workspace/lpc_board_nxp_lpcxpresso_1769/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.o" -MT"src/board.d" -o "src/board.o" "../src/board.c"
 In file included from ../src/board.c:32:0:
-/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h: In function 'Board_LED_Init':
-/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: error: 'LED0_GPIO_BIT_NUM' undeclared (first use in this function); did you mean 'LED0_GPIO_PORT_NUM'?
+/home/parichey/work/ese3025_2/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h: In function 'Board_LED_Init':
+/home/parichey/work/ese3025_2/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: error: 'LED0_GPIO_BIT_NUM' undeclared (first use in this function); did you mean 'LED0_GPIO_PORT_NUM'?
   Chip_GPIO_WriteDirBit(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, true);
                                                       ^~~~~~~~~~~~~~~~~
                                                       LED0_GPIO_PORT_NUM
-/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: note: each undeclared identifier is reported only once for each function it appears in
+/home/parichey/work/ese3025_2/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:100:54: note: each undeclared identifier is reported only once for each function it appears in
 ../src/board.c: At top level:
 ../src/board.c:72:13: error: redefinition of 'Board_LED_Init'
  static void Board_LED_Init(void)
              ^~~~~~~~~~~~~~
 In file included from ../src/board.c:32:0:
-/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:96:13: note: previous definition of 'Board_LED_Init' was here
+/home/parichey/work/ese3025_2/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:96:13: note: previous definition of 'Board_LED_Init' was here
  static void Board_LED_Init(void)
              ^~~~~~~~~~~~~~
 ../src/board.c: In function 'Board_I2C_Init':
@@ -24,11 +24,11 @@ In file included from ../src/board.c:32:0:
   ^~~~~~
 In file included from ../src/board.c:32:0:
 At top level:
-/home/parichey/Documents/MCUXpresso_10.3.0_2200/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:96:13: warning: 'Board_LED_Init' defined but not used [-Wunused-function]
+/home/parichey/work/ese3025_2/workspace/lpc_board_nxp_lpcxpresso_1769/inc/board.h:96:13: warning: 'Board_LED_Init' defined but not used [-Wunused-function]
+src/subdir.mk:24: recipe for target 'src/board.o' failed
  static void Board_LED_Init(void)
              ^~~~~~~~~~~~~~
-src/subdir.mk:24: recipe for target 'src/board.o' failed
 make: *** [src/board.o] Error 1
 
-12:02:26 Build Finished (took 220ms)
+22:38:02 Build Finished (took 472ms)
 
