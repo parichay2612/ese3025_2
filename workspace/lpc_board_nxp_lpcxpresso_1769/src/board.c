@@ -50,10 +50,6 @@
 #define JOYSTICK_PRESS_GPIO_PORT_NUM            0
 #define JOYSTICK_PRESS_GPIO_BIT_NUM             17
 #define LED0_GPIO_PORT_NUM                      0
-#define LED1_GPIO_PORT_NUM                      3
-#define LED2_GPIO_PORT_NUM                      3
-#define LED1_GPIO_BIT_NUM                       26
-#define LED2_GPIO_BIT_NUM                       25
 #define LED0_GPIO_BIT_NUM                       22
 
 /*****************************************************************************
@@ -74,8 +70,6 @@ static void Board_LED_Init(void)
 	/* Pin PIO0_22 is configured as GPIO pin during SystemInit */
 	/* Set the PIO_22 as output */
 	Chip_GPIO_WriteDirBit(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, true);
-
-
 }
 
 /*****************************************************************************
@@ -139,7 +133,6 @@ void Board_LED_Set(uint8_t LEDNumber, bool On)
 	/* There is only one LED */
 	if (LEDNumber == 0) {
 		Chip_GPIO_WritePortBit(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, On);
-
 	}
 }
 

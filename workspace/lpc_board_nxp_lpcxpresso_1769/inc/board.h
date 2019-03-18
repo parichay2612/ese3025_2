@@ -1,4 +1,3 @@
-
 /*
  * @brief NXP LPC1769 XPresso board file
  *
@@ -87,21 +86,6 @@ extern "C" {
 #define LEDS_LED3           0x04
 #define LEDS_LED4           0x08
 #define LEDS_NO_LEDS        0x00
-#define LED0_GPIO_PORT_NUM                      0
-#define LED1_GPIO_PORT_NUM                      3
-#define LED2_GPIO_PORT_NUM                      3
-
-
-
-static void Board_LED_Init(void)
-{
-	/* Pin PIO0_22 is configured as GPIO pin during SystemInit */
-	/* Set the PIO_22 as output */
-	Chip_GPIO_WriteDirBit(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, true);
-
-}
-
-
 
 /**
  * Button defines
